@@ -788,7 +788,7 @@ body::before {
 }
 
 /* Increase brightness only for Gayathri's photo */
-.family-photo[src="gayathri.jpg"] {
+.family-photo[src="gayathri.jpeg"] {
     filter: sepia(0.15) contrast(1.05) brightness(1.05);
 }
 
@@ -818,6 +818,15 @@ body::before {
     display: block;
     margin-top: 5px;
     font-weight: 600;
+}
+
+.family-header .te1 {
+    /* font-family: var(--display-font); */
+    /* font-size: 1.2rem;
+    color: var(--gold-dark);
+    display: block;
+    margin-top: 5px; */
+    font-weight: 300;
 }
 
 .names-list p {
@@ -1206,7 +1215,7 @@ body::before {
 
 /* Card 3 - Lavender Purple Theme (Bride Making) */
 .card-3 {
-    background-image: linear-gradient(rgba(243, 229, 245, 0.9), rgba(238, 224, 245, 0.9)), url('card_bg_3.png');
+    background-image: linear-gradient(rgba(243, 229, 245, 0.9), rgba(238, 224, 245, 0.9));
     border-color: #ce93d8;
     box-shadow: 0 8px 20px rgba(206, 147, 216, 0.3);
 }
@@ -1282,7 +1291,7 @@ body::before {
 
 /* Card 7 - Very Bright Golden Theme (Wedding Ceremony) ⭐ */
 .card-7 {
-    background-image: linear-gradient(rgba(255, 253, 150, 0.97), rgba(255, 250, 130, 0.97)), url('card_bg_3.png');
+    background-image: linear-gradient(rgba(255, 253, 150, 0.97), rgba(255, 250, 130, 0.8)), url('card_bg_3.png');
     border-color: #ffd700;
     box-shadow: 0 10px 30px rgba(255, 215, 0, 0.5);
 }
@@ -1499,16 +1508,22 @@ body::before {
     }
     
     .countdown-grid {
-        gap: 10px;
+        gap: 8px;
+        margin: 20px 0;
     }
     
     .cd-box {
-        width: 60px;
-        padding: 12px 5px;
+        width: 55px;
+        padding: 10px 3px;
     }
     
     .cd-num {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+    }
+    
+    .cd-label {
+        font-size: 0.55rem;
+        letter-spacing: 0.4px;
     }
     
     .schedule-title {
@@ -1592,6 +1607,23 @@ body::before {
     
     .tap-hint p {
         font-size: 1.6rem;
+    }
+    
+    /* Adjust corner symbols for mobile to prevent text overlap */
+    .corner-symbol.top-left {
+        top: 6px;
+        left: 6px;
+    }
+    
+    .corner-symbol.top-right {
+        top: 6px;
+        right: 6px;
+    }
+    
+    .symbol-om,
+    .symbol-swastika {
+        font-size: 1.25rem;
+        padding: 6px 10px;
     }
 }
 
