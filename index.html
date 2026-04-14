@@ -8,7 +8,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Montserrat:wght@300;400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Montserrat:wght@300;400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Allura&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -32,7 +32,7 @@
             <div class="scroll-parchment">
                 <div class="scroll-content">
                     <img src="logo.png" alt="Wedding Logo" class="custom-logo">
-                    <h2>Gayathri & Amaresh</h2>
+                    <h2 class="names-banner">Gayathri & Amaresh</h2>
                     <span>గాయత్రి & అమరేష్</span>
                 </div>
             </div>
@@ -89,8 +89,11 @@
             <p class="telugu-names">గాయత్రి & అమరేష్</p>
             <div class="wedding-text">Wedding</div>
 
-            <div class="date-divider">MAY 08, 2026</div>
+            <div class="date-divider">MAY <span class="date-08">8</span>, 2026</div>
             <p class="location"><i class="fas fa-map-marker-alt"></i> Rajahmundry & Jaggampeta</p>
+            <!-- <a href="https://www.google.com/maps/search/Rajahmundry+Jaggampeta" target="_blank" class="location-link" title="Click to view on Google Maps">
+               
+            </a> -->
             
             <!-- Countdown Timer -->
             <div class="countdown-grid">
@@ -124,7 +127,7 @@
                         <span class="te">గాయత్రి</span>
                     </div>
                     <div class="names-list">
-                        <p>Daughter of Mr. Boda Venkata Chalapathi Rao & Mrs. Boda Ramalakshmi<span class="te">శ్రీ బోడా వెంకట చలపతి రావు & శ్రీమతి బోడా రామలక్ష్మి కుమార్తె</span></p>
+                        <p>Daughter of </p><p>Mr. Boda Venkata Chalapathi Rao</p> & <p>Mrs. Boda Ramalakshmi</p><span class="te">శ్రీ బోడా వెంకట చలపతి రావు & శ్రీమతి బోడా రామలక్ష్మి కుమార్తె</span></p>
                     </div>
                 </div>
                 
@@ -138,7 +141,7 @@
                         <span class="te">అమరేష్</span>
                     </div>
                     <div class="names-list">
-                        <p>Son of Mr. Kotha Venkata Naga Veerraju & Mrs. Kotha Chandrika<span class="te">శ్రీ కొత్త వెంకట నాగ వీర్రాజు & శ్రీమతి కొత్త చంద్రిక కుమారుడు</span></p>
+                        <p>Son of </p><p>Mr. Kotha Venkata Naga Veerraju</p> & <p>Mrs. Kotha Chandrika</p><span class="te">శ్రీ కొత్త వెంకట నాగ వీర్రాజు & శ్రీమతి కొత్త చంద్రిక కుమారుడు</span></p>
                     </div>
                 </div>
             </div>
@@ -167,13 +170,17 @@
                     <p class="ev-detail"><i class="far fa-clock"></i> 6:28 AM</p>
                     <div class="location-row">
                         <p class="ev-detail"><i class="fas fa-map-marker-alt"></i> Jaggampeta, AP</p>
-                        <span class="map-icon" onclick="toggleMap(this)">
-                            <i class="fas fa-map"></i>
-                        </span>
+                        <div class="map-icon-wrapper">
+                            <span class="map-icon" onclick="toggleMap(this)">
+                                <i class="fas fa-map"></i>
+                            </span>
+                            <span class="tap-me-text">(tap me)</span>
+                        </div>
                     </div>
                     <div class="map-embed">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3827.8!2d82.0!3d16.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTbCsDU0JzAwLjAiTiA4MsKwMDAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        <a href="https://maps.app.goo.gl/9VyicR66nCoFUCdv6" target="_blank" class="open-maps-btn">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3811.9992631780437!2d82.05946899999999!3d17.170247000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDEwJzEyLjkiTiA4MsKwMDMnMzQuMSJF!5e0!3m2!1sen!2sin!4v1776178073470!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3827.8!2d82.0!3d16.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDU0JzAwLjAiTiA4MsKwMDAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                        <a href="https://maps.app.goo.gl/5yHv55gLrHuGnLur9" target="_blank" class="open-maps-btn">
                             <i class="fas fa-external-link-alt"></i> Open in Google Maps
                         </a>
                     </div>
@@ -192,13 +199,17 @@
                     <p class="ev-detail"><i class="far fa-clock"></i> 4:00 PM - 6:00 PM</p>
                     <div class="location-row">
                         <p class="ev-detail"><i class="fas fa-map-marker-alt"></i> Jaggampeta, AP</p>
-                        <span class="map-icon" onclick="toggleMap(this)">
-                            <i class="fas fa-map"></i>
-                        </span>
+                        <div class="map-icon-wrapper">
+                            <span class="map-icon" onclick="toggleMap(this)">
+                                <i class="fas fa-map"></i>
+                            </span>
+                            <span class="tap-me-text">(tap me)</span>
+                        </div>
                     </div>
                     <div class="map-embed">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3827.8!2d82.0!3d16.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTbCsDU0JzAwLjAiTiA4MsKwMDAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        <a href="https://maps.app.goo.gl/9VyicR66nCoFUCdv6" target="_blank" class="open-maps-btn">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3811.9992631780437!2d82.05946899999999!3d17.170247000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDEwJzEyLjkiTiA4MsKwMDMnMzQuMSJF!5e0!3m2!1sen!2sin!4v1776178073470!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3827.8!2d82.0!3d16.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDU0JzAwLjAiTiA4MsKwMDAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567891!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                        <a href="https://maps.app.goo.gl/5yHv55gLrHuGnLur9" target="_blank" class="open-maps-btn">
                             <i class="fas fa-external-link-alt"></i> Open in Google Maps
                         </a>
                     </div>
@@ -217,12 +228,16 @@
                     <p class="ev-detail"><i class="far fa-clock"></i> 6:00 AM</p>
                     <div class="location-row">
                         <p class="ev-detail"><i class="fas fa-map-marker-alt"></i> Rajahmundry, AP</p>
-                        <span class="map-icon" onclick="toggleMap(this)">
-                            <i class="fas fa-map"></i>
-                        </span>
+                        <div class="map-icon-wrapper">
+                            <span class="map-icon" onclick="toggleMap(this)">
+                                <i class="fas fa-map"></i>
+                            </span>
+                            <span class="tap-me-text">(tap me)</span>
+                        </div>
                     </div>
                     <div class="map-embed">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3827.8!2d82.0!3d16.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTbCsDU0JzAwLjAiTiA4MsKwMDAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567891!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1614.0361943725677!2d81.79618471476286!3d16.974997363639382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a37a37395c3e3ed%3A0x1aba9c3d68b9e15e!2s5-239%2F5A%2C%20Navabharat%20Nagar%2C%20Rajamahendravaram%2C%20Andhra%20Pradesh%20533124!5e0!3m2!1sen!2sin!4v1776178400916!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d15547.310704377607!2d77.62206385!3d13.04663845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sin!4v1776178297016!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
                         <a href="https://maps.app.goo.gl/o4Zmr5HihpcqhzPi7" target="_blank" class="open-maps-btn">
                             <i class="fas fa-external-link-alt"></i> Open in Google Maps
                         </a>
@@ -242,12 +257,16 @@
                     <p class="ev-detail"><i class="far fa-clock"></i> 11:00 AM</p>
                     <div class="location-row">
                         <p class="ev-detail"><i class="fas fa-map-marker-alt"></i> Rajahmundry, AP</p>
-                        <span class="map-icon" onclick="toggleMap(this)">
-                            <i class="fas fa-map"></i>
-                        </span>
+                        <div class="map-icon-wrapper">
+                            <span class="map-icon" onclick="toggleMap(this)">
+                                <i class="fas fa-map"></i>
+                            </span>
+                            <span class="tap-me-text">(tap me)</span>
+                        </div>
                     </div>
                     <div class="map-embed">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3827.8!2d82.0!3d16.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTbCsDU0JzAwLjAiTiA4MsKwMDAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567892!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3815.539713382869!2d81.8002973!3d16.9971766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a37a3bd649fbc45%3A0x6a57bffc62baed91!2sSubhamasthu%20Ganni&#39;s%20Function%20Hall!5e0!3m2!1sen!2sin!4v1776178106047!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3827.8!2d82.0!3d16.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDU0JzAwLjAiTiA4MsKwMDAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567893!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
                         <a href="https://maps.app.goo.gl/twSdv7CkrVjzTM369" target="_blank" class="open-maps-btn">
                             <i class="fas fa-external-link-alt"></i> Open in Google Maps
                         </a>
@@ -267,12 +286,16 @@
                     <p class="ev-detail"><i class="far fa-clock"></i> 5:00 PM - 5:30 PM</p>
                     <div class="location-row">
                         <p class="ev-detail"><i class="fas fa-map-marker-alt"></i> Rajahmundry, AP</p>
-                        <span class="map-icon" onclick="toggleMap(this)">
-                            <i class="fas fa-map"></i>
-                        </span>
+                        <div class="map-icon-wrapper">
+                            <span class="map-icon" onclick="toggleMap(this)">
+                                <i class="fas fa-map"></i>
+                            </span>
+                            <span class="tap-me-text">(tap me)</span>
+                        </div>
                     </div>
                     <div class="map-embed">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3827.8!2d82.0!3d16.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTbCsDU0JzAwLjAiTiA4MsKwMDAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567893!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3815.539713382869!2d81.8002973!3d16.9971766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a37a3bd649fbc45%3A0x6a57bffc62baed91!2sSubhamasthu%20Ganni&#39;s%20Function%20Hall!5e0!3m2!1sen!2sin!4v1776178106047!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3827.8!2d82.0!3d16.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDU0JzAwLjAiTiA4MsKwMDAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567894!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
                         <a href="https://maps.app.goo.gl/twSdv7CkrVjzTM369" target="_blank" class="open-maps-btn">
                             <i class="fas fa-external-link-alt"></i> Open in Google Maps
                         </a>
@@ -291,12 +314,16 @@
                     <p class="ev-detail"><i class="far fa-clock"></i> 7:00 PM - 9:00 PM</p>
                     <div class="location-row">
                         <p class="ev-detail"><i class="fas fa-map-marker-alt"></i> Rajahmundry, AP</p>
-                        <span class="map-icon" onclick="toggleMap(this)">
-                            <i class="fas fa-map"></i>
-                        </span>
+                        <div class="map-icon-wrapper">
+                            <span class="map-icon" onclick="toggleMap(this)">
+                                <i class="fas fa-map"></i>
+                            </span>
+                            <span class="tap-me-text">(tap me)</span>
+                        </div>
                     </div>
                     <div class="map-embed">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3827.8!2d82.0!3d16.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTbCsDU0JzAwLjAiTiA4MsKwMDAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567894!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3815.539713382869!2d81.8002973!3d16.9971766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a37a3bd649fbc45%3A0x6a57bffc62baed91!2sSubhamasthu%20Ganni&#39;s%20Function%20Hall!5e0!3m2!1sen!2sin!4v1776178106047!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3827.8!2d82.0!3d16.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDU0JzAwLjAiTiA4MsKwMDAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567895!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
                         <a href="https://maps.app.goo.gl/twSdv7CkrVjzTM369" target="_blank" class="open-maps-btn">
                             <i class="fas fa-external-link-alt"></i> Open in Google Maps
                         </a>
@@ -317,12 +344,16 @@
                     <p class="ev-detail"><i class="far fa-clock"></i> 9:00 PM - 1:00 AM</p>
                     <div class="location-row">
                         <p class="ev-detail"><i class="fas fa-map-marker-alt"></i> Rajahmundry, AP</p>
-                        <span class="map-icon" onclick="toggleMap(this)">
-                            <i class="fas fa-map"></i>
-                        </span>
+                        <div class="map-icon-wrapper">
+                            <span class="map-icon" onclick="toggleMap(this)">
+                                <i class="fas fa-map"></i>
+                            </span>
+                            <span class="tap-me-text">(tap me)</span>
+                        </div>
                     </div>
                     <div class="map-embed">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3827.8!2d82.0!3d16.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTbCsDU0JzAwLjAiTiA4MsKwMDAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567894!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3815.539713382869!2d81.8002973!3d16.9971766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a37a3bd649fbc45%3A0x6a57bffc62baed91!2sSubhamasthu%20Ganni&#39;s%20Function%20Hall!5e0!3m2!1sen!2sin!4v1776178106047!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3827.8!2d82.0!3d16.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDU0JzAwLjAiTiA4MsKwMDAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567896!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
                         <a href="https://maps.app.goo.gl/twSdv7CkrVjzTM369" target="_blank" class="open-maps-btn">
                             <i class="fas fa-external-link-alt"></i> Open in Google Maps
                         </a>
@@ -341,12 +372,16 @@
                     <p class="ev-detail"><i class="far fa-clock"></i> 12:00 PM - 2:00 PM</p>
                     <div class="location-row">
                         <p class="ev-detail"><i class="fas fa-map-marker-alt"></i> Jaggampeta, AP</p>
-                        <span class="map-icon" onclick="toggleMap(this)">
-                            <i class="fas fa-map"></i>
-                        </span>
+                        <div class="map-icon-wrapper">
+                            <span class="map-icon" onclick="toggleMap(this)">
+                                <i class="fas fa-map"></i>
+                            </span>
+                            <span class="tap-me-text">(tap me)</span>
+                        </div>
                     </div>
                     <div class="map-embed">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3827.8!2d82.0!3d16.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTbCsDU0JzAwLjAiTiA4MsKwMDAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567895!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3812.040570570094!2d82.06067190000002!3d17.1682375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a37783839035667%3A0x3919034d388c8989!2sArya%20Vysya%20Kalyana%20Mandapam!5e0!3m2!1sen!2sin!4v1776178019095!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3827.8!2d82.0!3d16.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDU0JzAwLjAiTiA4MsKwMDAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567897!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
                         <a href="https://maps.app.goo.gl/39ipS9B8ydi56L598" target="_blank" class="open-maps-btn">
                             <i class="fas fa-external-link-alt"></i> Open in Google Maps
                         </a>
@@ -365,12 +400,16 @@
                     <p class="ev-detail"><i class="far fa-clock"></i> 4:00 PM - 7:00 PM</p>
                     <div class="location-row">
                         <p class="ev-detail"><i class="fas fa-map-marker-alt"></i> Jaggampeta, AP</p>
-                        <span class="map-icon" onclick="toggleMap(this)">
-                            <i class="fas fa-map"></i>
-                        </span>
+                        <div class="map-icon-wrapper">
+                            <span class="map-icon" onclick="toggleMap(this)">
+                                <i class="fas fa-map"></i>
+                            </span>
+                            <span class="tap-me-text">(tap me)</span>
+                        </div>
                     </div>
                     <div class="map-embed">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3827.8!2d82.0!3d16.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTbCsDU0JzAwLjAiTiA4MsKwMDAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567896!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3812.040570570094!2d82.06067190000002!3d17.1682375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a37783839035667%3A0x3919034d388c8989!2sArya%20Vysya%20Kalyana%20Mandapam!5e0!3m2!1sen!2sin!4v1776178019095!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3827.8!2d82.0!3d16.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDU0JzAwLjAiTiA4MsKwMDAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567898!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
                         <a href="https://maps.app.goo.gl/39ipS9B8ydi56L598" target="_blank" class="open-maps-btn">
                             <i class="fas fa-external-link-alt"></i> Open in Google Maps
                         </a>
@@ -413,7 +452,7 @@
         <footer class="website-footer">
             <div class="footer-content">
                 <p class="footer-single-line">
-                    Designed & Developed with ❤️ by Gayathri & Amaresh (గాయత్రి & అమరేష్) © 2026
+                    Developed & Tested with ❤️ by Gayathri & Amaresh (గాయత్రి & అమరేష్) © 2026
                 </p>
             </div>
         </footer>

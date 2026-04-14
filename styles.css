@@ -2,6 +2,19 @@
    INDIAN WEDDING THEME - ENHANCED
    =================================== */
 
+/* Cataneo BT Font */
+@font-face {
+    font-family: 'Cataneo BT';
+    src: url('https://db.onlinewebfonts.com/t/8e22783d707ad140baa89f4004bc2e2d.eot');
+    src: url('https://db.onlinewebfonts.com/t/8e22783d707ad140baa89f4004bc2e2d.eot?#iefix') format('embedded-opentype'),
+         url('https://db.onlinewebfonts.com/t/8e22783d707ad140baa89f4004bc2e2d.woff2') format('woff2'),
+         url('https://db.onlinewebfonts.com/t/8e22783d707ad140baa89f4004bc2e2d.woff') format('woff'),
+         url('https://db.onlinewebfonts.com/t/8e22783d707ad140baa89f4004bc2e2d.ttf') format('truetype'),
+         url('https://db.onlinewebfonts.com/t/8e22783d707ad140baa89f4004bc2e2d.svg#Cataneo BT') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
     /* Color Palette */
     --gold: #d4af37;
@@ -615,8 +628,8 @@ body::before {
 }
 
 .couple-names {
-    font-family: var(--script-font);
-    font-size: 3.5rem;
+    font-family: 'Cataneo BT', cursive;
+    font-size: 2.5rem;
     line-height: 1.2;
     color: var(--maroon);
     margin: 0;
@@ -661,6 +674,50 @@ body::before {
     font-weight: 700;
 }
 
+.date-08 {
+    display: inline-block;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+    font-weight: 700;
+}
+
+.location-link {
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.location-link:hover {
+    transform: translateY(-2px);
+}
+
+.location-link::after {
+    content: "Click to view on Google Maps";
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 100;
+    font-family: var(--body-font);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.location-link:hover::after {
+    opacity: 1;
+}
+
 .location {
     font-family: var(--body-font);
     font-size: 1.1rem;
@@ -674,6 +731,11 @@ body::before {
 .location i {
     color: var(--maroon);
     margin-right: 8px;
+    transition: color 0.3s ease;
+}
+
+.location-link:hover .location i {
+    color: var(--gold);
 }
 
 /* ===================================
@@ -819,14 +881,21 @@ body::before {
     margin-top: 5px;
     font-weight: 600;
 }
-
+.names-banner {
+    font-family: 'Cataneo BT', cursive;
+    font-size: 2.5rem;
+    color: var(--maroon);
+    text-align: center;
+    margin: 20px 0;
+    font-weight: normal;
+}
 .family-header .te1 {
-    /* font-family: var(--display-font); */
-    /* font-size: 1.2rem;
-    color: var(--gold-dark);
+    font-family: 'Cataneo BT', cursive;
+    font-size: 1.8rem;
+    color: var(--maroon);
     display: block;
-    margin-top: 5px; */
-    font-weight: 300;
+    margin-top: 5px;
+    font-weight: 400;
 }
 
 .names-list p {
@@ -1095,6 +1164,12 @@ body::before {
     width: 100%;
 }
 
+.map-icon-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 .map-icon {
     color: var(--maroon);
     font-size: 1rem;
@@ -1106,7 +1181,40 @@ body::before {
     transition: all 0.3s ease;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     display: inline-flex;
-    margin-left: 5px;
+    position: relative;
+}
+
+.tap-me-text {
+    font-family: var(--body-font);
+    font-size: 0.75rem;
+    color: #888;
+    font-style: italic;
+    white-space: nowrap;
+}
+
+.map-icon::after {
+    content: "Click to view on Google Maps";
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+    font-family: var(--body-font);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.map-icon:hover::after {
+    opacity: 1;
 }
 
 .map-icon:hover {
@@ -1142,10 +1250,21 @@ body::before {
     border-radius: 0 0 15px 15px;
 }
 
+.map-tap-text {
+    text-align: center;
+    font-family: var(--body-font);
+    font-size: 0.85rem;
+    color: #888;
+    margin: 8px 0;
+    font-style: italic;
+    font-weight: 500;
+    padding: 5px;
+}
+
 .open-maps-btn {
     display: block;
     width: calc(100% - 40px);
-    margin: 15px 20px;
+    margin: 10px 20px 15px;
     padding: 12px 20px;
     background: linear-gradient(135deg, #4285f4, #34a853);
     color: white;
@@ -1489,7 +1608,7 @@ body::before {
     }
     
     .couple-names {
-        font-size: 2.8rem;
+        font-size: 2.2rem;
     }
     
     .telugu-names {
@@ -1580,7 +1699,7 @@ body::before {
     }
     
     .couple-names {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
     }
     
     .telugu-names {
@@ -1714,3 +1833,4 @@ body::before {
 }
 
 /* Made with Bob */
+

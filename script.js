@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initCountdown();
     initMapToggles();
     initFlowerRain();
+    initDateAnimation();
 });
 
 // ===================================
@@ -678,6 +679,109 @@ window.addEventListener('scroll', updateBrightness);
 document.addEventListener('DOMContentLoaded', function() {
     setTimeout(updateBrightness, 1000);
 });
+
+// ===================================
+// DATE ANIMATION (8 to Infinity)
+// ===================================
+function initDateAnimation() {
+    const dateElement = document.querySelector('.date-08');
+    if (!dateElement) return;
+    
+    let isInfinity = false;
+    let heartElements = [];
+    
+    function createFloatingHeart() {
+        const heart = document.createElement('span');
+        heart.textContent = '💕';
+        heart.className = 'floating-heart';
+        heart.style.position = 'absolute';
+        heart.style.fontSize = '1.2em';
+        heart.style.opacity = '0';
+        heart.style.pointerEvents = 'none';
+        
+        // Random position around the date element
+        const angle = Math.random() * 360;
+        const distance = 30 + Math.random() * 20;
+        const x = Math.cos(angle * Math.PI / 180) * distance;
+        const y = Math.sin(angle * Math.PI / 180) * distance;
+        
+        heart.style.left = '50%';
+        heart.style.top = '50%';
+        heart.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(0)`;
+        
+        dateElement.parentElement.style.position = 'relative';
+        dateElement.parentElement.appendChild(heart);
+        
+        // Animate heart
+        setTimeout(function() {
+            heart.style.transition = 'all 0.6s ease-out';
+            heart.style.opacity = '1';
+            heart.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y - 20}px)) scale(1)`;
+        }, 50);
+        
+        setTimeout(function() {
+            heart.style.opacity = '0';
+            heart.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y - 40}px)) scale(0.5)`;
+        }, 1500);
+        
+        setTimeout(function() {
+            heart.remove();
+        }, 2100);
+        
+        return heart;
+    }
+    
+    function showHearts() {
+        // Create 2 hearts for subtle effect
+        for (let i = 0; i < 2; i++) {
+            setTimeout(function() {
+                createFloatingHeart();
+            }, i * 400);
+        }
+    }
+    
+    function animateDate() {
+        if (!isInfinity) {
+            // Change to infinity
+            dateElement.style.opacity = '0';
+            dateElement.style.transform = 'scale(0.8)';
+            
+            setTimeout(function() {
+                dateElement.textContent = '∞';
+                dateElement.style.color = '';
+                dateElement.style.fontSize = '1.25em';
+                dateElement.style.opacity = '1';
+                dateElement.style.transform = 'scale(1) translateY(2px)';
+                isInfinity = true;
+                
+                // Show floating hearts
+                showHearts();
+            }, 400);
+            
+            // Keep infinity for 3 seconds
+            setTimeout(animateDate, 3400);
+        } else {
+            // Change back to 8
+            dateElement.style.opacity = '0';
+            dateElement.style.transform = 'scale(0.8)';
+            
+            setTimeout(function() {
+                dateElement.textContent = '8';
+                dateElement.style.color = '';
+                dateElement.style.fontSize = '';
+                dateElement.style.opacity = '1';
+                dateElement.style.transform = 'scale(1)';
+                isInfinity = false;
+            }, 400);
+            
+            // Keep 8 for 2.4 seconds
+            setTimeout(animateDate, 2800);
+        }
+    }
+    
+    // Start animation after 2.4 seconds
+    setTimeout(animateDate, 2400);
+}
 
 // Made with ❤️ for Gayathri & Amaresh
 
