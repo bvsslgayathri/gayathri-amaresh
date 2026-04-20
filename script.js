@@ -185,7 +185,7 @@ function initMusicPlayer() {
 // COUNTDOWN TIMER
 // ===================================
 function initCountdown() {
-    const weddingDate = new Date('2026-05-08T10:00:00+05:30').getTime();
+    const weddingDate = new Date('2026-05-08T23:58:00+05:30').getTime();
     
     function updateCountdown() {
         const now = new Date().getTime();
